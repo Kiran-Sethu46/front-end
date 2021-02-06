@@ -7,8 +7,8 @@ import Collage from "./components/Collage";
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <Collage />
+    <App />
+    {/* <Collage /> */}
   </React.StrictMode>,
   document.getElementById("root")
 );
