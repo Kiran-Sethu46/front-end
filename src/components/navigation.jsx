@@ -3,7 +3,6 @@ import db from "../firebase";
 
 const Navigation = () => {
   const [image, setImage] = useState([]);
-
   useEffect(() => {
     db.collection("logo").onSnapshot((snapshot) => {
       setImage(snapshot.docs.map((doc) => doc.data()));
