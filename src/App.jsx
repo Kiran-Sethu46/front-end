@@ -11,6 +11,7 @@ import Contact from "./components/contact";
 import JsonData from "./data/data.json";
 import ImageGallerys from "./components/ImageGallery";
 import Profile from "./components/Profile";
+import "./App.css";
 
 export class App extends Component {
   state = {

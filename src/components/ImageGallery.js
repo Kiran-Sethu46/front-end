@@ -20,6 +20,7 @@ const ImageGallerys = () => {
 
   return (
     <div className="imageGallery">
+      <h2>Gallery</h2>
       <ImageGallery items={images} />
     </div>
   );

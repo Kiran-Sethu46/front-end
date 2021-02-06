@@ -1,8 +1,19 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
+import db from "../firebase";
 
-export class Navigation extends Component {
-  render() {
-    return (
+const Navigation = () => {
+  const [image, setImage] = useState([]);
+
+  useEffect(() => {
+    db.collection("logo").onSnapshot((snapshot) => {
+      setImage(snapshot.docs.map((doc) => doc.data()));
+    });
+  });
+
+  console.log(image);
+
+  return (
+    <div>
       <nav id="menu" className="navbar navbar-default navbar-fixed-top">
         <div className="container">
           <div className="navbar-header">
@@ -13,13 +24,23 @@ export class Navigation extends Component {
               data-target="#bs-example-navbar-collapse-1"
             >
               {" "}
-              <span className="sr-only">Toggle navigation</span>{" "}
+              <span className="sr-only">Toggle Navigation</span>{" "}
               <span className="icon-bar"></span>{" "}
               <span className="icon-bar"></span>{" "}
               <span className="icon-bar"></span>{" "}
             </button>
             <a className="navbar-brand page-scroll" href="#page-top">
-              React Landing Page
+              {image.map((logo) => (
+                <img
+                  src={logo.imageURL}
+                  alt=""
+                  style={{
+                    height: "50px",
+                    objectFit: "contain",
+                    marginTop: "-10px",
+                  }}
+                />
+              ))}
             </a>{" "}
           </div>
 
@@ -67,8 +88,8 @@ export class Navigation extends Component {
           </div>
         </div>
       </nav>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Navigation;

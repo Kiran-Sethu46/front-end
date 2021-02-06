@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../App.css";
 
 export class features extends Component {
   render() {
@@ -10,8 +11,8 @@ export class features extends Component {
           </div>
           <div className="row">
             {this.props.data
-              ? this.props.data.map((d,i) => (
-                  <div  key={`${d.title}-${i}`} className="col-xs-6 col-md-3">
+              ? this.props.data.map((d, i) => (
+                  <div key={`${d.title}-${i}`} className="col-xs-6 col-md-3">
                     {" "}
                     <i className={d.icon}></i>
                     <h3>{d.title}</h3>

@@ -2,13 +2,18 @@
   "name": "front-end",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "firebase": "^8.2.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-image-gallery": "^1.0.8",
     "react-scripts": "3.4.1",
+    "react-switch-theme": "^0.3.0",
+    "semantic-ui-react": "^2.0.3",
     "vue": "^2.6.12"
   },
   "scripts": {
