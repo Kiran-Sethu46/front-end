@@ -19,7 +19,10 @@ const ImageGallerys = () => {
   ];
 
   return (
-    <div className="imageGallery">
+    <div
+      className="imageGallery"
+      style={{ padding: "40px", textAlign: "center" }}
+    >
       <h2>Gallery</h2>
       <ImageGallery items={images} />
     </div>

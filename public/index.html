@@ -46,6 +46,8 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
   <div id="root"></div>
+  <div id="google_translate_element"></div>
+
   <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
   <script type="text/javascript" src="js/SmoothScroll.js"></script>
@@ -57,4 +59,15 @@
     src="//code.tidio.co/eacyrw0lzlrclgmbinv2h8mfmdwuihqw.js"
     async
   ></script>
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: "en",
+        },
+        "google_translate_element"
+      );
+    }
+  </script>
+  <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>

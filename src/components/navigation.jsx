@@ -1,16 +1,8 @@
-import React, { useEffect, useState } from "react";
-import db from "../firebase";
+import React, { useState } from "react";
+import DarkModeToggle from "react-dark-mode-toggle";
 
 const Navigation = () => {
-  const [image, setImage] = useState([]);
-  useEffect(() => {
-    db.collection("logo").onSnapshot((snapshot) => {
-      setImage(snapshot.docs.map((doc) => doc.data()));
-    });
-  });
-
-  console.log(image);
-
+  const [dark, setDark] = useState(false);
   return (
     <div>
       <nav id="menu" className="navbar navbar-default navbar-fixed-top">
@@ -29,17 +21,7 @@ const Navigation = () => {
               <span className="icon-bar"></span>{" "}
             </button>
             <a className="navbar-brand page-scroll" href="#page-top">
-              {image.map((logo) => (
-                <img
-                  src={logo.imageURL}
-                  alt=""
-                  style={{
-                    height: "50px",
-                    objectFit: "contain",
-                    marginTop: "-10px",
-                  }}
-                />
-              ))}
+              NAVIGATION
             </a>{" "}
           </div>
 
@@ -82,6 +64,9 @@ const Navigation = () => {
                 <a href="#contact" className="page-scroll">
                   Contact
                 </a>
+              </li>
+              <li>
+                <DarkModeToggle onChange={setDark} checked={dark} size={80} />
               </li>
             </ul>
           </div>
