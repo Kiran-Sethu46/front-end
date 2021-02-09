@@ -8,22 +8,21 @@ import Gallery from "./components/gallery";
 import Testimonials from "./components/testimonials";
 import Team from "./components/Team";
 import Contact from "./components/contact";
-import JsonData from "./data/data.json";
 import ImageGallerys from "./components/ImageGallery";
 import "./App.css";
 import GoogleTranslate from "./components/GoogleTranslate";
 
 export class App extends Component {
-  state = {
-    landingPageData: {},
-  };
-  getlandingPageData() {
-    this.setState({ landingPageData: JsonData });
-  }
+  // state = {
+  //   landingPageData: {},
+  // };
+  // getlandingPageData() {
+  //   this.setState({ landingPageData: JsonData });
+  // }
 
-  componentDidMount() {
-    this.getlandingPageData();
-  }
+  // componentDidMount() {
+  //   this.getlandingPageData();
+  // }
 
   render() {
     return (

@@ -1,8 +1,9 @@
+import { dark } from "@material-ui/core/styles/createPalette";
 import React from "react";
 import ImageGallery from "react-image-gallery";
 import "../App.css";
 
-const ImageGallerys = () => {
+const ImageGallerys = ({ black }) => {
   const images = [
     {
       original: "https://picsum.photos/id/1018/1000/600/",
@@ -20,7 +21,7 @@ const ImageGallerys = () => {
 
   return (
     <div
-      className="imageGallery"
+      className={`${black}`}
       style={{ padding: "40px", textAlign: "center" }}
     >
       <h2>Gallery</h2>

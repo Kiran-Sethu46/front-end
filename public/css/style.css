@@ -8,6 +8,17 @@ html {
   width: 100% !important;
   height: 100% !important;
 }
+
+body.dark {
+  font-family: "Open Sans", sans-serif;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  color: #777;
+  font-weight: 400;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: black;
+}
 h2,
 h3,
 h4 {
@@ -58,8 +69,6 @@ ol {
 ul,
 ol {
   padding: 0;
-  webkit-padding: 0;
-  moz-padding: 0;
 }
 hr {
   height: 2px;
@@ -604,4 +613,148 @@ label {
   #about img {
     margin: 50px 0;
   }
+}
+
+.dark {
+  background: black;
+}
+
+#features1 {
+  padding: 100px 0;
+  background: black;
+}
+
+#features1 i.fa {
+  font-size: 38px;
+  margin-bottom: 20px;
+  transition: all 0.5s;
+  color: black;
+  width: 100px;
+  height: 100px;
+  padding: 30px 0;
+  border-radius: 50%;
+  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+#about1 {
+  padding: 100px 0;
+  background-color: black;
+}
+#about1 h3 {
+  font-size: 22px;
+  margin: 0 0 20px 0;
+}
+#about1 h2 {
+  position: relative;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+#about1 h2::after {
+  position: absolute;
+  content: "";
+  background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+  height: 4px;
+  width: 60px;
+  bottom: 0;
+  left: 0;
+}
+
+#services1 {
+  padding: 100px 0;
+  background: black;
+  color: #fff;
+}
+#services1 .service-desc {
+  margin: 10px 10px 20px;
+}
+#services1 h2 {
+  color: #fff;
+}
+#services1 .section-title h2::after {
+  position: absolute;
+  content: "";
+  background: rgba(255, 255, 255, 0.3);
+  height: 4px;
+  width: 60px;
+  bottom: 0;
+  margin-left: -30px;
+  left: 50%;
+}
+#services1 i.fa {
+  font-size: 42px;
+  width: 120px;
+  height: 120px;
+  padding: 40px 0;
+  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
+}
+#services1 h3 {
+  font-weight: 500;
+  padding: 5px 0;
+  color: #fff;
+}
+#services1 p {
+  color: rgba(255, 255, 255, 0.75);
+}
+#services1 .service-desc {
+  margin-bottom: 40px;
+}
+
+#portfolio1 {
+  background-color: black;
+  padding: 100px 0;
+}
+
+#testimonial1 {
+  padding: 100px 0;
+  background-color: black;
+}
+
+#team1 {
+  padding: 100px 0;
+  background-color: black;
+}
+
+.imageGallery {
+  background-color: black;
+}
+
+#contact1 {
+  padding: 100px 0 60px 0;
+  background: black;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#footer1 {
+  background-color: black;
+  padding: 30px 0;
+  border-top: 2px solid white;
+}
+
+#contact1 .social {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 50px;
+  margin-top: 50px;
+  text-align: center;
+}
+#contact1 .social ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+#contact1 .social i.fa {
+  font-size: 22px;
+  width: 48px;
+  height: 48px;
+  padding: 12px 0;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+#contact1 .social i.fa:hover {
+  color: #608dfd;
+  background: #fff;
 }
